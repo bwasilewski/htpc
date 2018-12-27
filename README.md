@@ -24,4 +24,7 @@ View the application at [http://127.0.0.1:5000](http://127.0.0.1:5000)
 * Show disk usage across all disks
 * Warn if a disk is low on space
 * Show current plex/kodi activity
+* Recently downloaded items
+* Suggested movies/tv shows
+* Remote control the TV via mobile devices
 * Drive health?
