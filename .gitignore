@@ -1,2 +1,4 @@
-htpc_env
+venv
 *.pyc
+
+node_modules
