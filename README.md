@@ -12,7 +12,7 @@ The goal of this project is to create a dashboard that will display data such as
 ## Getting Started
 
 ```
-$ source htpc_env/bin/activate  # activate the virtual environment
+$ source venv/bin/activate      # activate the virtual environment
 $ python main.py                # start the application
 ```
 
