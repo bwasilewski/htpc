@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
-</head>
-<body>
-  <h1>Homepage</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% set active_page = "home" %}
+
+{% block body %}
+<section class="section">
+  <div class="columns">
+    <aside class="column is-2">
+      <nav class="menu">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+          <li><a href="#" class="is-active">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+        </ul>
+        <p class="menu-label">Advanced</p>
+        <ul class="menu-list">
+          <li><a href="#">Adv. Item 1</a></li>
+          <li><a href="#">Adv. Item 2</a></li>
+          <li><a href="#">Adv. Item 3</a></li>
+          <li><a href="#">Adv. Item 4</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="column" role="main">
+      <h2>Main Content will live here</h2>
+    </main>
+  </div>
+</section>
+{% endblock %}

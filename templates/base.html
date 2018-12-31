@@ -1,0 +1,61 @@
+{% set navigation = [
+  ('/', 'home', 'Home'),
+  ('/documentation', 'documentation', 'Documentation'),
+  ('https://192.168.1.9:9090/sabnzbd/', 'sabnzbd', 'SABnzbd'),
+  ('http://192.168.1.9:5050/', 'couchpotato', 'CouchPotato'),
+  ('http://192.168.1.9:8989/', 'sonarr', 'Sonarr'),
+  ('http://192.168.1.9:32400/web/index.html', 'plex', 'Plex'),
+]-%}
+{% set active_page = active_page|default('home') -%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- temporary bulma import until we can set up the frontend dev environment -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+  <title>HTPC</title>
+</head>
+<body>
+    <nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <h1 class="navbar-item">HTPC</h1>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div class="navbar-menu">
+        <div class="navbar-start">
+        {% for href, id, caption in navigation %}
+          <a class="navbar-item is-tab{% if id == active_page %} is-active{% endif %}" href="{{ href|e }}">{{ caption|e }}</a>
+        {% endfor %}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">More</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="#">IPTorrents</a>
+              <a class="navbar-item" href="#">NZBGeek</a>
+              <a class="navbar-item" href="#">DOGnzb</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            Weather here
+          </div>
+          <div class="navbar-item">
+            Date, time here
+          </div>
+          <a href="#" class="navbar-item">Login</a>
+        </div>
+      </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
