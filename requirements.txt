@@ -36,7 +36,7 @@ django-admin==1.2.4
 django-excel-response2==2.0.8
 django-require==1.0.6
 django-six==1.0.4
-ecdsa==0.10
+ecdsa==0.13.3
 flask-mongoengine==0.7.4
 flower==0.7.0
 gunicorn==19.3.0
