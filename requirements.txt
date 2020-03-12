@@ -59,7 +59,7 @@ numpy==1.10.1
 pandas==0.17.0
 paramiko==1.12.2
 profilehooks==1.7
-psutil==5.4.3
+psutil==5.6.6
 py2app==0.7.3
 pyOpenSSL==0.13.1
 pycrypto==2.6.1
