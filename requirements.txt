@@ -1,5 +1,5 @@
 Cython==0.20.1
-Django==1.8.6
+Django==1.11.29
 Fabric==1.8.2
 Flask==0.12.2
 Flask-PyMongo==0.5.1
